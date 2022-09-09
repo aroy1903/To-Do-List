@@ -1,3 +1,3 @@
 # ToDoList
 
-To-do list made with JS,CSS,HTML and webpack. 
+To-do list made with JavaScript , CSS, HTML and webpack. 
