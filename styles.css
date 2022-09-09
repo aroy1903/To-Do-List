@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* Box sizing rules */ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  width: 100%;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#mainContainer {
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#mainHeader {
+  height: 85px;
+  background-color: #ee6983;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#mainHeady {
+  font-size: 2rem;
+}
+#content {
+  flex-grow: 1;
+  display: flex;
+  background-color: bisque;
+}
+#menu {
+  width: 430px;
+  background-color: #850e35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#ui {
+  flex-grow: 1;
+  background-color: #fad4d4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#header {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+}
+.menuItems {
+  height: 120px;
+  width: 430px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuItems:last-child {
+  margin-bottom: 30px;
+}
+#allToDos:hover {
+  border: 3px white solid;
+}
+#todaysToDos:hover {
+  border: 3px white solid;
+}
+#importantToDos:hover {
+  border: 3px white solid;
+}
+
+.buttons {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Raleway', sans-serif;
+}
+
+.buttons:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    padding: 0.25em 0.75em;
+  }
+}
+
+#addScreen {
+  color: white;
+  height: 500px;
+  width: 500px;
+  background-color: #fa9494;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  border: black 3px solid;
+  border-radius: 15px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#todoContParent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+#todoCont {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #fad4d4;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 1450px) {
+  #todoCont {
+    width: 810px;
+  }
+  .newTodo {
+    width: 810px !important;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  #todoCont {
+    width: 700px;
+  }
+  .newTodo {
+    width: 700px !important;
+  }
+}
+#inputContainer {
+  margin-left: 10px;
+}
+#enterButton {
+  align-self: center;
+}
+#popupHeader {
+  align-self: center;
+}
+.labels {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  font-weight: 700;
+}
+.iLContainer {
+  margin-bottom: 20px;
+}
+#descrip {
+  width: 300px;
+}
+#headerCont {
+  height: 70px;
+  width: 500px;
+  background-color: #fad4d4;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 15px;
+  color: black;
+}
+#mainHeady {
+  font-size: 2.25rem;
+}
+.newTodo {
+  width: 90%;
+  height: 110px;
+  border-radius: 10px;
+  color: white;
+  background-color: #d2001a;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#deleteButton {
+  width: 100px;
+  height: 40px;
+}
+#importantButton {
+  cursor: pointer;
+  color: #000;
+  font-size: 2rem;
+}
+.notImportant {
+  font-size: 2.8rem !important;
+}
